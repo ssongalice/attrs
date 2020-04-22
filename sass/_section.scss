@@ -5,11 +5,7 @@ body {
     letter-spacing: -0.07rem;
     color: #222;
 }
-
-
-
 /* ================================================================== */
-
 section {
     display: flex;
     flex-direction: column;
@@ -17,9 +13,8 @@ section {
     justify-content: center;
     padding: 3rem;
     min-height: 80vh;
-
     @include respond(phone) {
-        padding: 3rem 0rem;
+        padding: 3rem 0;
     }
 }
 
@@ -27,17 +22,14 @@ section {
     width: 600px;
     height: auto;
     position: relative;
-
     @include respond(phone) {
         width: 70%;
         margin: 0 auto;
     }
-
 }
 
 .box {
     margin: 2.5rem 0;
-
     @include respond(phone) {
         margin: 3rem 0;
     }
@@ -52,7 +44,6 @@ section {
 
 .logo-width {
     width: 600px;
-
     @include respond(phone) {
         width: 70%;
         margin: 0;
@@ -67,32 +58,26 @@ section {
     justify-content: center;
     margin: 0;
     top: 0;
-    padding: 1rem 0rem;
+    padding: 1rem 0;
     background-color: #fff;
     z-index: 999;
 }
-
 
 .logo {
     font-size: 2.5rem;
     letter-spacing: 0.15rem;
     font-weight: 900;
     font-family: 'Playfair Display', serif;
-
     @include respond(phone) {
         font-size: 2.2rem;
     }
-
 }
-
-
 /* ================================================================== */
 .glide {
     width: 70vw;
     margin: 0 auto;
     padding: 0;
     position: relative;
-
     @include respond(phone) {
         width: 100%;
     }
@@ -108,8 +93,7 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: box-shadow .3s;
-
+    transition: box-shadow 0.3s;
     @include respond(phone) {
         padding: 2rem;
     }
@@ -120,7 +104,6 @@ section {
         position: absolute;
         top: 15%;
         left: 40%;
-
         @include respond(phone) {
             width: 90%;
             top: 50%;
@@ -133,20 +116,18 @@ section {
         height: 80px;
         position: absolute;
         top: calc(50% - 40px);
-
         @include respond(phone) {
             top: 10%;
         }
     }
 
     &:hover {
-         box-shadow: 0 0 11px rgba(33,33,33,.2);
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
 
-        .glide__slide__image  {
+        .glide__slide__image {
             transform: scale(1.1);
             transition-duration: 0.5s;
         }
-
     }
 }
 
@@ -166,7 +147,8 @@ section {
 }
 
 .moveBtn {
-    width: 120px;
+    min-width: 120px;
+    width: auto;
     padding: 0.8rem;
     position: absolute;
     border: 1px solid #bfbfbf;
@@ -185,7 +167,6 @@ section {
 .allshow {
     right: 0;
     bottom: -40px;
-
     @include respond(phone) {
         right: 0.5rem;
     }
@@ -194,12 +175,10 @@ section {
 .return {
     right: 0;
     top: 0;
-
     @include respond(phone) {
         right: 0.5rem;
     }
 }
-
 /* ================================================================== */
 .all {
     &__box {
@@ -208,11 +187,9 @@ section {
         flex-wrap: wrap-reverse;
         margin: 0;
         padding: 0;
-
         @include respond(phone) {
             width: 100%;
         }
-
 
         &__title {
             width: 100%;
@@ -220,7 +197,6 @@ section {
             padding: 1.5rem 0;
             text-align: center;
             background-color: #f6f6f6;
-
             @include respond(phone) {
                 height: 60px;
                 padding: 1rem 0;
@@ -237,8 +213,6 @@ section {
     &__list {
         width: calc(50% - 0.6rem);
         margin: 0.3rem;
-
-
         @include respond(phone) {
             width: 50%;
             margin: 0.5rem 0;
@@ -251,6 +225,12 @@ section {
         display: inline-block;
     }
 
+    &_-img:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
     &__text {
         text-align: center;
 
@@ -259,7 +239,6 @@ section {
             font-weight: 400;
             margin: 0;
             color: #222;
-
             @include respond(phone) {
                 font-size: 1.2rem;
             }
@@ -269,7 +248,6 @@ section {
             font-size: 1.2rem;
             font-weight: 300;
             color: #444;
-
             @include respond(phone) {
                 font-size: 1rem;
             }

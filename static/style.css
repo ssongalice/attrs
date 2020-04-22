@@ -222,7 +222,7 @@ section {
   min-height: 80vh; }
   @media only screen and (max-width: 640px) {
     section {
-      padding: 3rem 0rem; } }
+      padding: 3rem 0; } }
 
 .container {
   width: 600px;
@@ -259,7 +259,7 @@ section {
   justify-content: center;
   margin: 0;
   top: 0;
-  padding: 1rem 0rem;
+  padding: 1rem 0;
   background-color: #fff;
   z-index: 999; }
 
@@ -292,7 +292,7 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
-  transition: box-shadow .3s; }
+  transition: box-shadow 0.3s; }
   @media only screen and (max-width: 640px) {
     .glide__slide {
       padding: 2rem; } }
@@ -333,7 +333,8 @@ section {
   color: #fff; }
 
 .moveBtn {
-  width: 120px;
+  min-width: 120px;
+  width: auto;
   padding: 0.8rem;
   position: absolute;
   border: 1px solid #bfbfbf;
@@ -398,6 +399,11 @@ section {
   width: 100%;
   height: auto;
   display: inline-block; }
+
+.all_-img:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; }
 
 .all__text {
   text-align: center; }
