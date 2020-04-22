@@ -8,8 +8,7 @@ Vue.prototype.$EventBus = new Vue();
 
 Vue.use(VueRouter);
 
-const router = new VueRouter({
-    mode: 'history',
+const router = new VueRouter({ 
     routes: routes,
 });
 

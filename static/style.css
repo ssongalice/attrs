@@ -397,8 +397,7 @@ section {
 
 .all__img {
   width: 100%;
-  height: auto;
-  display: inline-block; }
+  height: auto; }
 
 .all_-img:after {
   content: "";
