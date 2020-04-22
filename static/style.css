@@ -398,7 +398,11 @@ section {
 .all__img {
   max-width: 100%;
   height: auto;
-  max-height: 100%; }
+  width: auto; }
+  @media only screen and (max-width: 640px) {
+    .all__img {
+      width: 100%;
+      height: auto; } }
 
 .all_-img:after {
   content: "";
