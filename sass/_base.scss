@@ -1,0 +1,158 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+// Media query manager
+/*
+0 - 600px : Phone
+600 - 900px : Tablet portrait
+900 - 1200px : Tablet landscape
+1200 - 1800px : where our normal styles apply
+1800px + : Big desktop
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 640px) {
+            @content
+        };
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        };
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {
+            @content
+        };
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        };
+    }
+
+    @if $breakpoint == iframe {
+        @media only screen and (max-width: 600px) {
+            @content
+        };
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto-sans', sans-serif;
+    //font-family: 'D2Coding',  sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 16px; 10px/16px = 62.5%;
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}
+
+body {
+    line-height: 1.6;
+    letter-spacing: -0.05rem;
+    color: $color-grey-5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+button {
+    background: none;
+    border: 0;
+}
+
+/* Reset Select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+///////////////////////////////////////////////////////
+// Table
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+
+    & > * {
+        font-size: 1.4rem;
+
+        @include respond(phone) {
+            font-size: 0.9rem;
+        }
+    }
+
+    tr   {
+        border-bottom: 1px solid $color-grey-2;
+    }
+
+    td, th {
+        padding: 1rem 2rem;
+
+        @include respond(phone) {
+            padding: 0.5rem 0rem;
+        }
+    }
+}
+
+.tbold {
+    font-weight: bold;
+}

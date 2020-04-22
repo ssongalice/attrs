@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.text {
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    &-title {
+        font-size: 4rem;
+        letter-spacing: 0.15rem;
+        font-weight: 800;
+        font-family: 'Playfair Display', serif;
+    }
+
+    &-main {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &-bold {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &-mini {
+        font-size: 1.3rem;
+        font-weight: 300;
+        letter-spacing: 0.01rem;
+    }
+
+    &-mono {
+        font-family: 'Space Mono', monospace;
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: #aaa;
+    }
+
+    &-en {
+        color: #bfbfbf;
+        font-weight: 400;
+        font-size: 80%;
+        margin-left: 0.5rem;
+    }
+    @include respond(phone) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+
+        &-main {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        &-bold {
+            font-size: 1.3rem;
+        }
+
+        &-mini {
+            font-size: 1.1rem;
+        }
+    }
+}

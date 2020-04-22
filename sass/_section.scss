@@ -1,0 +1,278 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+body {
+    letter-spacing: -0.07rem;
+    color: #222;
+}
+
+
+
+/* ================================================================== */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    min-height: 80vh;
+
+    @include respond(phone) {
+        padding: 3rem 0rem;
+    }
+}
+
+.container {
+    width: 600px;
+    height: auto;
+    position: relative;
+
+    @include respond(phone) {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+.box {
+    margin: 2.5rem 0;
+
+    @include respond(phone) {
+        margin: 3rem 0;
+    }
+}
+
+.logo-before {
+    @include respond(phone) {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.logo-width {
+    width: 600px;
+
+    @include respond(phone) {
+        width: 70%;
+        margin: 0;
+    }
+}
+
+.logo-fixed {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 0;
+    padding: 1rem 0rem;
+    background-color: #fff;
+    z-index: 999;
+}
+
+
+.logo {
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+
+    @include respond(phone) {
+        font-size: 2.2rem;
+    }
+
+}
+
+
+/* ================================================================== */
+.glide {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}
+
+.glide__slide {
+    width: 100%;
+    height: 70vh;
+    min-height: 450px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    background-color: #ff5438;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: box-shadow .3s;
+
+    @include respond(phone) {
+        padding: 2rem;
+    }
+
+    &__image {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: 15%;
+        left: 40%;
+
+        @include respond(phone) {
+            width: 90%;
+            top: 50%;
+            left: 5%;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: calc(50% - 40px);
+
+        @include respond(phone) {
+            top: 10%;
+        }
+    }
+
+    &:hover {
+         box-shadow: 0 0 11px rgba(33,33,33,.2);
+
+        .glide__slide__image  {
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
+
+    }
+}
+
+.glide__text {
+    &__title {
+        font-size: 2.1rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    &__keyword {
+        font-family: 'Space Mono', monospace;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #fff;
+    }
+}
+
+.moveBtn {
+    width: 120px;
+    padding: 0.8rem;
+    position: absolute;
+    border: 1px solid #bfbfbf;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #bfbfbf;
+    text-align: center;
+
+    &:hover {
+        border-color: #000;
+        color: #2f2f2f;
+        cursor: pointer;
+    }
+}
+
+.allshow {
+    right: 0;
+    bottom: -40px;
+
+    @include respond(phone) {
+        right: 0.5rem;
+    }
+}
+
+.return {
+    right: 0;
+    top: 0;
+
+    @include respond(phone) {
+        right: 0.5rem;
+    }
+}
+
+/* ================================================================== */
+.all {
+    &__box {
+        width: 70vw;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin: 0;
+        padding: 0;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+
+        &__title {
+            width: 100%;
+            height: 80px;
+            padding: 1.5rem 0;
+            text-align: center;
+            background-color: #f6f6f6;
+
+            @include respond(phone) {
+                height: 60px;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    &__list {
+        width: calc(50% - 0.6rem);
+        margin: 0.3rem;
+
+
+        @include respond(phone) {
+            width: 50%;
+            margin: 0.5rem 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+
+    &__text {
+        text-align: center;
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0;
+            color: #222;
+
+            @include respond(phone) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #444;
+
+            @include respond(phone) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
