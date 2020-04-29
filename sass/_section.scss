@@ -220,9 +220,8 @@ section {
     }
 
     &__img {
-        max-width: 100%;
         height: auto;
-        width: auto;
+        width: 100%;
         align-self: center;
 
         @include respond(phone) {
