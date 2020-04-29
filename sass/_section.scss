@@ -104,7 +104,7 @@ section {
 
     @include respond(big-desktop) {
         width: 100%;
-        height: 45vh;
+        height: 50vh;
     }
 
     @include respond(phone) {
@@ -118,9 +118,6 @@ section {
         top: 15%;
         left: 40%;
 
-        @include respond(big-desktop) {
-            top: 20%; 
-        }
 
 
         @include respond(phone) {
