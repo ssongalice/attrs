@@ -13,6 +13,7 @@ section {
     justify-content: center;
     padding: 3rem;
     min-height: 80vh;
+
     @include respond(phone) {
         padding: 3rem 0;
     }
@@ -22,6 +23,7 @@ section {
     width: 600px;
     height: auto;
     position: relative;
+
     @include respond(phone) {
         width: 70%;
         margin: 0 auto;
@@ -78,6 +80,11 @@ section {
     margin: 0 auto;
     padding: 0;
     position: relative;
+
+    @include respond(big-desktop) {
+        width: 50vw;
+    }
+
     @include respond(phone) {
         width: 100%;
     }
@@ -94,6 +101,7 @@ section {
     background-position: center;
     position: relative;
     transition: box-shadow 0.3s;
+
     @include respond(phone) {
         padding: 2rem;
     }
@@ -187,6 +195,11 @@ section {
         flex-wrap: wrap-reverse;
         margin: 0;
         padding: 0;
+
+        @include respond(big-desktop) {
+            width: 50vw;
+        }
+
         @include respond(phone) {
             width: 100%;
         }
