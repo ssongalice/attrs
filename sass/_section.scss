@@ -93,7 +93,7 @@ section {
 .glide__slide {
     width: 100%;
     height: 70vh;
-    min-height: 450px;
+    min-height: 350px;
     margin: 0 auto;
     padding: 2rem 4rem;
     background-color: #ff5438;
@@ -104,7 +104,7 @@ section {
 
     @include respond(big-desktop) {
         width: 100%;
-        height: 60vh;
+        height: 45vh;
     }
 
     @include respond(phone) {
@@ -117,6 +117,12 @@ section {
         position: absolute;
         top: 15%;
         left: 40%;
+
+        @include respond(big-desktop) {
+            top: 20%; 
+        }
+
+
         @include respond(phone) {
             width: 90%;
             top: 50%;
